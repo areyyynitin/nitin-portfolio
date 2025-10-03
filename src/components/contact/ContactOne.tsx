@@ -64,7 +64,7 @@ const ContactOne = () => {
 
         {/* Social Links */}
         <div className="font-sans pt-8 sm:pt-10 text-[18px] sm:text-[20px] text-center md:text-left mb-12 sm:mb-20 px-2">
-          <p className="font-bold mb-4">Let's Connect</p>
+          <p className="font-bold mb-4">{'Let\'s Connect'}</p>
           <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-4">
             {[
               { src: "/svg/gmail.svg", alt: "Gmail" },

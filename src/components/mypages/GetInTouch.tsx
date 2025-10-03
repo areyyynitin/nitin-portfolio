@@ -3,7 +3,6 @@ import React from 'react'
 import Link from 'next/link'
 import {
   TextRevealCard,
-  TextRevealCardDescription,
   TextRevealCardTitle,
 } from "../ui/text-reveal-card";
 
@@ -26,7 +25,7 @@ const GetInTouch = () => {
 
       <div className='mt-6 flex flex-col justify-center items-center text-center'> 
         <div>
-          <p className='text-base md:text-lg px-4'>Got a project in mind? Let's build something great.</p>
+          <p className='text-base md:text-lg px-4'>Got a project in mind? Let&apos;s build something great.</p>
         </div>
 
         <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 w-full max-w-xs sm:max-w-none sm:w-auto'>

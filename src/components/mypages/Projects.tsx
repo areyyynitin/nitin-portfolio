@@ -34,11 +34,11 @@ const Projects = () => {
      <Link target="_blank" rel="noopener noreferrer" href="https://code-network-two.vercel.app/" className="underline ml-2 flex flex-row"> 
         <div className="mx-2 flex-1">
           <div className="relative mt-2 aspect-[3/4] w-full">
-            <img
-              loading="lazy"
+            <Image
               className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover contrast-75"
               alt="Code Network project"
               src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              fill
               style={{
                 boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
                 opacity: 1,
@@ -84,11 +84,11 @@ const Projects = () => {
      <Link target="_blank" rel="noopener noreferrer" href="https://code-network-two.vercel.app/" className="underline ml-2 flex flex-row"> 
         <div className="mx-2 flex-1">
           <div className="relative mt-2 aspect-[3/4] w-full">
-            <img
-              loading="lazy"
+            <Image
               className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover contrast-75"
               alt="Open Note project"
               src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              fill
               style={{
                 boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
                 opacity: 1,

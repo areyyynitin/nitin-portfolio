@@ -1,7 +1,6 @@
 "use client"
-import Link from 'next/link'
 import React from 'react'
-import { TypewriterEffect, TypewriterEffectSmooth } from '../ui/typewriter-effect';
+import { TypewriterEffect } from '../ui/typewriter-effect';
 
 const LandingPage = () => {
     const words = [
