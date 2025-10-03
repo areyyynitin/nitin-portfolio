@@ -7,7 +7,7 @@ import Shining from '@/components/mypages/Shining'
 import GetInTouch from '@/components/mypages/GetInTouch'
 import Education from '@/components/mypages/Education'
 import Headers from '@/components/mypages/Headers'
-import Navbar from '@/components/mypages/Navbar'
+import Navbar from '@/components/mypages/Footer'
 
 const FirstPage = () => {
   return (

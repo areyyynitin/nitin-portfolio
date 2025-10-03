@@ -12,8 +12,8 @@ const ContactOne = () => {
         {/* Heading */}
         <div className="font-sans pt-6 text-[18px] sm:text-[20px] text-center md:text-left px-2">
             <h2 className='font-bold font-kode-mono text-2xl md:text-[30px]  text-start'> Contact </h2>
-          <p>Have an idea but need someone to bring it to life?</p>
-          <p className="text-[18px] sm:text-[20px] font-semibold">I help turn concepts into working products</p>
+          <p className=' text-start '>Have an idea but need someone to bring it to life?</p>
+          <p className="text-[18px] sm:text-[20px] font-semibold text-start">I help turn concepts into working products.</p>
         </div>
 
         {/* Contact Grid */}
@@ -26,7 +26,7 @@ const ContactOne = () => {
               <div className="bg-black text-white p-2 rounded-md flex-shrink-0">
                 <Mail size={18} />
               </div>
-              <Link href="mailto:np089250@gmail.com" className="text-blue-600 hover:underline break-all text-sm sm:text-base">
+              <Link href="mailto:np089250@gmail.com" className="0 hover:underline break-all text-sm sm:text-base">
                 np089250@gmail.com
               </Link>
             </div>

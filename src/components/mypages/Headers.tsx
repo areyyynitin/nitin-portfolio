@@ -42,7 +42,7 @@ const Headers = () => {
 
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
-                    <div className='md:hidden mt-4 pb-4'>
+                    <div className='md:hidden  '>
                         <nav className='flex flex-col space-y-2'>
                             <Link 
                                 href="/me" 
@@ -52,24 +52,25 @@ const Headers = () => {
                                 Home
                             </Link>
                             <Link 
-                                href="/about" 
+                                target="_blank" rel="noopener noreferrer" href="https://github.com/areyyynitin/"
                                 className='py-2 px-3 hover:bg-gray-100 rounded transition-colors'
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                About
+                                Github
                             </Link>
-                            <p 
-                                className='py-2 px-3 hover:bg-gray-100 rounded transition-colors cursor-pointer'
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Projects
-                            </p>
-                            <Link 
+                              <Link 
                                 href="/contact" 
                                 className='py-2 px-3 hover:bg-gray-100 rounded transition-colors'
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Contact
+                            </Link>
+                            <Link 
+                                href="/blog" 
+                                className='py-2 px-3 hover:bg-gray-100 rounded transition-colors'
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Blog
                             </Link>
                         </nav>
                     </div>

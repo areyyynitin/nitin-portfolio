@@ -1,5 +1,5 @@
 import ContactOne from '@/components/contact/ContactOne'
-import Navbar from '@/components/mypages/Navbar'
+import Navbar from '@/components/mypages/Footer'
 import React from 'react'
 
 const page = () => {
