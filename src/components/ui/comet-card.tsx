@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import {
   motion,
   useMotionValue,
@@ -31,52 +31,81 @@ export const CometCard = ({
   const rotateX = useTransform(
     mouseYSpring,
     [-0.5, 0.5],
-    [`-${rotateDepth}deg`, `${rotateDepth}deg`],
+    [`-${rotateDepth}deg`, `${rotateDepth}deg`]
   );
   const rotateY = useTransform(
     mouseXSpring,
     [-0.5, 0.5],
-    [`${rotateDepth}deg`, `-${rotateDepth}deg`],
+    [`${rotateDepth}deg`, `-${rotateDepth}deg`]
   );
 
   const translateX = useTransform(
     mouseXSpring,
     [-0.5, 0.5],
-    [`-${translateDepth}px`, `${translateDepth}px`],
+    [`-${translateDepth}px`, `${translateDepth}px`]
   );
   const translateY = useTransform(
     mouseYSpring,
     [-0.5, 0.5],
-    [`${translateDepth}px`, `-${translateDepth}px`],
+    [`${translateDepth}px`, `-${translateDepth}px`]
   );
 
   const glareX = useTransform(mouseXSpring, [-0.5, 0.5], [0, 100]);
   const glareY = useTransform(mouseYSpring, [-0.5, 0.5], [0, 100]);
-
   const glareBackground = useMotionTemplate`radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.75) 20%, rgba(255, 255, 255, 0) 80%)`;
 
+  // Desktop hover
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
-
     const rect = ref.current.getBoundingClientRect();
-
-    const width = rect.width;
-    const height = rect.height;
-
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-
+    const xPct = (e.clientX - rect.left) / rect.width - 0.5;
+    const yPct = (e.clientY - rect.top) / rect.height - 0.5;
     x.set(xPct);
     y.set(yPct);
   };
-
   const handleMouseLeave = () => {
     x.set(0);
     y.set(0);
   };
+
+  // Mobile gyroscope
+  useEffect(() => {
+    const handleOrientation = (event: DeviceOrientationEvent) => {
+      if (!ref.current) return;
+
+      const gamma = event.gamma ?? 0; // left/right tilt
+      const beta = event.beta ?? 0;   // front/back tilt
+
+      // Normalize to [-0.5, 0.5]
+      const xPct = Math.max(Math.min(gamma / 90 / 2, 0.5), -0.5);
+      const yPct = Math.max(Math.min(beta / 180 / 2, 0.5), -0.5);
+
+      x.set(xPct);
+      y.set(yPct);
+    };
+
+    // Type-safe requestPermission for iOS 13+
+    interface DeviceOrientationEventWithPermission extends DeviceOrientationEvent {
+      requestPermission?: () => Promise<"granted" | "denied">;
+    }
+
+    const eventWithPermission =
+      DeviceOrientationEvent as unknown as DeviceOrientationEventWithPermission;
+
+    if (typeof eventWithPermission.requestPermission === "function") {
+      eventWithPermission.requestPermission().then((perm) => {
+        if (perm === "granted") {
+          window.addEventListener("deviceorientation", handleOrientation, true);
+        }
+      });
+    } else {
+      window.addEventListener("deviceorientation", handleOrientation, true);
+    }
+
+    return () => {
+      window.removeEventListener("deviceorientation", handleOrientation);
+    };
+  }, [x, y]);
 
   return (
     <div className={cn("perspective-distant transform-3d", className)}>

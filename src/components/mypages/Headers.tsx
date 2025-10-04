@@ -9,10 +9,10 @@ const Headers = () => {
 
   return (
     <div>
-        <header className='font-kode-mono py-8 text-[20px] font-bold mx-4 md:mx-16 lg:mx-82'>
+        <header className=' py-8 text-[20px] font-bold mx-4 md:mx-16 lg:mx-82'>
                 <div className='flex flex-row justify-between items-center'>
                     <div>
-                     <h2 className='font-bold font-kode-mono text-2xl md:text-[30px]  text-start'> Hi,Nitin here</h2>
+                     <h2 className='font-bold  text-2xl md:text-[30px]  text-start'> Hi,Nitin here</h2>
                     </div>
 
                     {/* Desktop Navigation */}

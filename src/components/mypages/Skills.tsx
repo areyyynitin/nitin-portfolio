@@ -19,8 +19,8 @@ const Skills = () => {
   ];
 
   return (
-    <div className='font-sans mx-4 md:mx-16 lg:mx-82 text-lg md:text-[20px]'>
-     <h2 className='font-bold font-kode-mono text-2xl md:text-[30px] pt-10 text-start'> Skills</h2>
+    <div className=' mx-4 md:mx-16 lg:mx-82 text-lg md:text-[20px]'>
+     <h2 className='font-bold  text-2xl md:text-[30px] pt-10 text-start'> Skills</h2>
 
       <div className='mt-3 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 md:gap-4 pl-0 md:pl-4'>
         {skills.map((skill) => (

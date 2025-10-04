@@ -3,8 +3,8 @@ import React from 'react'
 
 const Education = () => {
     return (
-        <div className='font-sans mx-4 md:mx-16 lg:mx-82 text-lg md:text-[20px]'>
-             <h2 className='font-bold font-kode-mono text-2xl md:text-[30px] pt-15 text-start'>Education </h2>
+        <div className=' mx-4 md:mx-16 lg:mx-82 text-lg md:text-[20px]'>
+             <h2 className='font-bold  text-2xl md:text-[30px] pt-15 text-start'>Education </h2>
             <div className=''>
                 <div className='flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0'>
                     <div className='flex-1'>

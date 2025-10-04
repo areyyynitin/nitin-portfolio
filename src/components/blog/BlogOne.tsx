@@ -5,8 +5,8 @@ import { HoverEffect } from "../ui/card-hover-effect";
 const BlogOne = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="flex-grow font-sans mx-4 md:mx-16 lg:mx-82 text-lg md:text-[20px]">
-        <h2 className="font-bold font-kode-mono text-2xl md:text-[30px] text-start">
+      <div className="flex-grow  mx-4 md:mx-16 lg:mx-82 text-lg md:text-[20px]">
+        <h2 className="font-bold  text-2xl md:text-[30px] text-start">
           Blog
         </h2>
         <div className="pt-6 pb-6">

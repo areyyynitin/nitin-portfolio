@@ -5,9 +5,9 @@ import Image from 'next/image'
 
 const Projects = () => {
   return (
-    <div className='font-sans mx-4 md:mx-16 lg:mx-82 text-lg md:text-xl'>
+    <div className='mx-4 md:mx-16 lg:mx-82 text-lg md:text-xl'>
       <div className='text-start mb-8'>
-        <h2 className='font-bold font-kode-mono text-2xl md:text-3xl pt-10'>Projects</h2>
+        <h2 className='font-bold  text-2xl md:text-3xl pt-10'>Projects</h2>
         <p className='text-base md:text-lg mt-2'>
           Before the real job, I was busy making websites… some worked, some just looked cool.
         </p>
@@ -34,7 +34,7 @@ const Projects = () => {
                       sizes="(max-width: 768px) 100vw, 320px"
                     />
                   </div>
-                  <div className="mt-3 flex items-center justify-between font-mono text-white px-1">
+                  <div className="mt-3 flex items-center justify-between text-white px-1">
                     <div className="text-sm">Code Network</div>
                     <div className="text-sm text-gray-400">May, 2025</div>
                   </div>
@@ -52,7 +52,7 @@ const Projects = () => {
               className='mb-4'
             />
             <p className='text-sm md:text-base leading-relaxed'>
-              <span className='font-bold text-xl md:text-2xl font-kode-mono block mb-2'>
+              <span className='font-bold text-xl md:text-2xl  block mb-2'>
                 Code Network
               </span>
               is an interactive web platform designed for coding interviews. It allows candidates to take interviews and interviewers to conduct them seamlessly. The platform features a real-time video calling system for live communication and an in-built code editor where candidates can write, run, and test their code during the interview. By combining live interaction with hands-on coding, Code Network provides a smooth and professional environment for technical assessments.
@@ -80,7 +80,7 @@ const Projects = () => {
                       sizes="(max-width: 768px) 100vw, 320px"
                     />
                   </div>
-                  <div className="mt-3 flex items-center justify-between font-mono text-white px-1">
+                  <div className="mt-3 flex items-center justify-between text-white px-1">
                     <div className="text-sm">Open Note</div>
                     <div className="text-sm text-gray-400">July, 2025</div>
                   </div>
@@ -91,7 +91,7 @@ const Projects = () => {
 
           <div className="flex-1 flex flex-col justify-center">
             <p className='text-sm md:text-base leading-relaxed'>
-              <span className='font-bold text-xl md:text-2xl font-kode-mono block mb-2'>
+              <span className='font-bold text-xl md:text-2xl block mb-2'>
                 Open Note
               </span>
               is a web app that lets users save and organize posts, articles, or videos they want to revisit later. It provides a clean and simple interface to quickly add, view, and manage notes, making it easy to keep track of important content without losing it in bookmarks or feeds.
