@@ -11,7 +11,7 @@ const ContactOne = () => {
       <main className="mx-4 sm:mx-8 md:mx-16 lg:mx-82">
         {/* Heading */}
         <div className=" pt-6 text-[18px] sm:text-[20px] text-center md:text-left px-2">
-            <h2 className='font-bold  text-2xl md:text-[30px]  text-start'> Contact </h2>
+          <h2 className='font-bold  text-2xl md:text-[30px]  text-start'> Contact </h2>
           <p className=' text-start '>Have an idea but need someone to bring it to life?</p>
           <p className="text-[18px] sm:text-[20px] font-semibold text-start">I help turn concepts into working products.</p>
         </div>
@@ -63,21 +63,25 @@ const ContactOne = () => {
         </div>
 
         {/* Social Links */}
-        <div className=" pt-8 sm:pt-10 text-[18px] sm:text-[20px] text-center md:text-left mb-12 sm:mb-20 px-2">
+        <div className="pt-8 sm:pt-10 text-[18px] sm:text-[20px] text-center md:text-left mb-12 sm:mb-20 px-2">
           <p className="font-bold mb-4">{'Let\'s Connect'}</p>
           <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-4">
             {[
-              { src: "/svg/gmail.svg", alt: "Gmail" },
-              { src: "/svg/github-mark.svg", alt: "GitHub" },
-              { src: "/svg/x.svg", alt: "X" },
-              { src: "/svg/linkedin.svg", alt: "LinkedIn" },
+              { src: "/svg/gmail.svg", alt: "Gmail", href: "mailto:np089250@gmail.com" },
+              { src: "/svg/github-mark.svg", alt: "GitHub", href: "https://github.com/areyyynitin/" },
+              { src: "/svg/x.svg", alt: "X", href: "https://x.com/areyyynitin" },
+              { src: "/svg/linkedin.svg", alt: "LinkedIn", href: "https://www.linkedin.com/in/nitin-prajapat/" },
             ].map((icon) => (
-              <div
+              <Link
                 key={icon.alt}
-                className="rounded-md bg-gray-200 p-2 hover:-translate-y-1 transition-transform"
+                href={icon.href}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Image src={icon.src} alt={icon.alt} width={40} height={40} />
-              </div>
+                <div className="rounded-md bg-gray-200 p-2 hover:-translate-y-1 transition-transform">
+                  <Image src={icon.src} alt={icon.alt} width={40} height={40} />
+                </div>
+              </Link>
             ))}
           </div>
         </div>

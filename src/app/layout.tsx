@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/svg/nitin.ico" />
+        <link rel="icon" href="/nitin.jpeg" />
       </head>
       <body className="antialiased">
         {children}
