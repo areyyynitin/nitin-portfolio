@@ -12,19 +12,20 @@ const Headers = () => {
         <header className=' py-8 text-[20px] font-bold mx-4 md:mx-16 lg:mx-82'>
                 <div className='flex flex-row justify-between items-center'>
                     <div>
-                     <h2 className='font-bold  text-2xl md:text-[30px]  text-start'> Hi,Nitin here</h2>
+                   <Link href="/me" > <h2 className='font-bold  text-2xl md:text-[30px]  text-start'> Hi, Nitin here.</h2> </Link>     
                     </div>
 
                     {/* Desktop Navigation */}
                     <div className='hidden md:block  md:text-[20px] '>
                         <nav className='flex flex-row cursor-pointer '>
-                            <Link href="/me" className='px-3  transition-colors hover:-translate-y-1 transition-transform'>Home</Link>
+                         
 
                             <Link target="_blank" rel="noopener noreferrer" href="https://github.com/areyyynitin/" > <p className='px-3 cursor-pointer  hover:-translate-y-1 transition-transform'>Github</p> </Link>
 
 
                             <Link href="/contact" className='px-3   hover:-translate-y-1 transition-transform'>Contact</Link>
                             <Link href="/blog" className='px-3   hover:-translate-y-1 transition-transform'>Blog</Link>
+                             <Link href="/resume" className='px-3   hover:-translate-y-1 transition-transform'>Resume</Link>
                         </nav>
                     </div>
 
@@ -44,13 +45,7 @@ const Headers = () => {
                 {isMenuOpen && (
                     <div className='md:hidden  '>
                         <nav className='flex flex-col space-y-2'>
-                            <Link 
-                                href="/me" 
-                                className='py-2 px-3 hover:bg-gray-100 rounded transition-colors'
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Home
-                            </Link>
+                           
                             <Link 
                                 target="_blank" rel="noopener noreferrer" href="https://github.com/areyyynitin/"
                                 className='py-2 px-3 hover:bg-gray-100 rounded transition-colors'
@@ -71,6 +66,13 @@ const Headers = () => {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Blog
+                            </Link>
+                                <Link 
+                                href="/resume" 
+                                className='py-2 px-3 hover:bg-gray-100 rounded transition-colors'
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Resume
                             </Link>
                         </nav>
                     </div>
