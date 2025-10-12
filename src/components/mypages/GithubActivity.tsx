@@ -16,8 +16,8 @@ export default function GitHubActivity() {
         <GitHubCalendar
           username="areyyynitin"
           colorScheme="light"
-    
-  hideTotalCount={true}    
+           hideColorLegend={true}   
+
           
           />
           </Link>
