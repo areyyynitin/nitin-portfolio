@@ -8,13 +8,14 @@ import GetInTouch from '@/components/mypages/GetInTouch'
 import Education from '@/components/mypages/Education'
 import Headers from '@/components/mypages/Headers'
 import Navbar from '@/components/mypages/Footer'
+import GitHubActivity from '@/components/mypages/GithubActivity'
 
 const FirstPage = () => {
   return (
     <div>
       <Headers />
       <LandingPage />
-     
+      <GitHubActivity/>
       <Experience />
       <Projects />
       <Skills />

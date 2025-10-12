@@ -131,3 +131,8 @@
     @apply mx-4 md:mx-16 lg:mx-82;
   }
 }
+
+*::selection {
+  background-color: black; /* your custom blue */
+  color: white; /* optional – changes the text color when selected */
+}
