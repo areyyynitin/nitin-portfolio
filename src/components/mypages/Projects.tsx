@@ -17,6 +17,13 @@ const Projects = () => {
         {/* First Project */}
         <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-12'>
           <div className='w-full max-w-sm lg:w-80 flex-shrink-0'>
+             <Image 
+              src="/svg/quotation-marks.svg" 
+              alt="Quote" 
+              height={40} 
+              width={40} 
+              className='mb-4'
+            />
             <CometCard>
               <Link 
                 target="_blank" 
@@ -44,13 +51,7 @@ const Projects = () => {
           </div>
 
           <div className="flex-1 flex flex-col justify-center">
-            <Image 
-              src="/svg/quotation-marks.svg" 
-              alt="Quote" 
-              height={40} 
-              width={40} 
-              className='mb-4'
-            />
+           
             <p className='text-sm md:text-base leading-relaxed'>
               <span className='font-bold text-xl md:text-2xl  block mb-2'>
                 Code Network

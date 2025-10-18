@@ -50,9 +50,9 @@ const Experience = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://www.optiminastic.com"
-                        className="underline ml-0 sm:ml-2 flex flex-row items-center gap-1"
+                        className="underline ml-0 sm:ml-2 flex flex-row items-center gap-1 hover:text-blue-500"
                       >
-                        <TrendingUp className="h-4 w-4" /> optiminastic.com
+                        <TrendingUp className="h-4 w-4 " /> optiminastic.com
                       </Link>
                     </div>
                   </div>
